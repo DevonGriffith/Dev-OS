@@ -11,7 +11,7 @@ int 0x10
 ; Attempt 2
 ; It tries to print the memory address of 'the_code' which is the proper way.
 ; But, BIOS places our bootsector binary at address ** 0x7c00 **,
-; we need to add that padding beforehand. We will do that next.
+; we need to add that padding beforehand. We will do that next (segmentation will be covered later)
 mov al, "2"
 int 0x10
 mov al, [the_code]
