@@ -41,3 +41,10 @@ loop:
 times 510-($-$$) db 0
 ; Magic number as always
 dw 0xaa55
+
+
+
+; Now it's time to run the bootsector and see our work:
+
+; nasm -fbin boot_sect_hello.asm -o boot_sect_hello.bin
+; qemu boot_sect_hello.bin
