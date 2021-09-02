@@ -23,5 +23,5 @@ jmp $ ; Jump to $.
 the_code: ; Defining "the_code" as "X".
     db "X"
 
-times 510 - ($-$$) db 0
-dw 0xaa55
+times 510 - ($-$$) db 0 ; Fill with 510 zeros minus the size of the previous code (to make up the remaining bytes in the bootsector, like we should).
+dw 0xaa55 ; Add the magic number as always!
