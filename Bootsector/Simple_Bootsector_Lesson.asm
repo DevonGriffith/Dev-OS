@@ -8,7 +8,7 @@
 loop:
     jmp loop 
 
-; Fill with 510 zeros minus the size of the previous code (to make up the remained of the 512 bytes).
+; Fill with 510 zeros minus the size of the previous code (to make up the remaining bytes so the bootsector is 512 bytes, like it should be).
 times 510-($-$$) db 0
 ; add the Magic number as always!
 dw 0xaa55 
