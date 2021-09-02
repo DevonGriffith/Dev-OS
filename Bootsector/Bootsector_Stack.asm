@@ -1,13 +1,13 @@
 mov ah, 0x0e ; tty mode
 
-mov bp, 0x8000 ; This is an address far away from 0x7c00 so that we don't get overwritten
-mov sp, bp ; If the stack is empty then sp points to bp
+mov bp, 0x8000 ; This is an address far away from 0x7c00 so that we don't get overwritten.
+mov sp, bp ; If the stack is empty then sp points to bp.
 
 push 'A'
 push 'B'
 push 'C'
 
-; To show how the stack grows downwards
+; To show how the stack grows downwards.
 mov al, [0x7ffe] ; 0x8000 - 2
 int 0x10 ; Display the results.
 
@@ -37,5 +37,5 @@ int 0x10
 
 
 jmp $
-times 510-($-$$) db 0 ; Fill with 510 zeros minus the size of the previous code (to make up the remaining bytes in the bootsector, like we should).
+times 510-($-$$) db 0 ; Fill with zeros minus the size of the previous code (to make up the remaining bytes in the bootsector, like we should).
 dw 0xaa55 ; Add the magic number as always!
