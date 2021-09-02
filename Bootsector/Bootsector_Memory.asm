@@ -3,7 +3,7 @@ mov ah, 0x0e
 ; Attempt 1 to access the memory
 ; Fails because it tries to print the memory address (pointer)
 ; not the actual contents
-mov al, "1"
+mov al, "1" ; First try
 int 0x10
 mov al, the_code
 int 0x10
@@ -12,7 +12,7 @@ int 0x10
 ; It tries to print the memory address of 'the_code' which is the proper way.
 ; But, BIOS places our bootsector binary at address ** 0x7c00 **,
 ; we need to add that padding beforehand. We will do that next (segmentation will be covered later)
-mov al, "2"
+mov al, "2" ; Second try
 int 0x10
 mov al, [the_code]
 int 0x10
@@ -22,7 +22,7 @@ int 0x10
 ; and then dereference the contents of that pointer.
 ; We need the help of a different register 'bx' because 'mov al, [ax]' is illegal in assembly.
 ; A register cannot be used as source and destination for the same command.
-mov al, "3"
+mov al, "3" ; Third try
 int 0x10
 mov bx, the_code
 add bx, 0x7c00
@@ -32,7 +32,7 @@ int 0x10
 ; Attempt 4
 ; We will try a shortcut (we know that the X is stored at byte 0x2d in our binary)
 ; That's smart but does not work, we don't want to be recounting label offsets every code change.
-mov al, "4"
+mov al, "4" ; Forth try
 int 0x10
 mov al, [0x7c2d]
 int 0x10
