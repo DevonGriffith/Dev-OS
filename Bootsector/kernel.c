@@ -1,4 +1,4 @@
-/* This will force us to create a kernel entry function instead of jumping to kernel.c:0x00 */
+/* This will force us to create a kernel entry function instead of jumping to kernel.c:0x00 this will prevent errors when booting*/
 void dummy_test_entrypoint() {
 }
 
