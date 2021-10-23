@@ -1,0 +1,49 @@
+ ------------------------------------------------------------------------
+|AniGIF is a copyright of Antonis Kyprianou.                             |
+|                                                                        |
+|You can use AniGIF for NON commercial purposes provided you             |
+|have the following information on your application's about box:         |
+|AniGIF control is copyright of Antonis Kyprianou (http://www.winasm.net)|
+|                                                                        |
+|You need my WRITTEN permission to use AniGIF in commercial applications |
+ ------------------------------------------------------------------------
+
+
+AniGIF V1.0.4.0
+---------------
+-improvements in backgroud color changing routine
+-In addition to a dll, the control is also packaged as a static library now
+-F5 accelerator not set;fixed
+-a silly bug could rarely crash AniGIF on file opening
+
+AniGIF V1.0.3.xxx
+-----------------
+New message supported:
+-WAGM_SETBKCOLOR
+
+-New menu item:Options-Background Color
+
+-minor bugs fixed
+-Accelerators and menu shortcuts added
+
+AniGIF V1.0.2.xxx
+-----------------
+-Hyperlink address was lost after calling UnloadGif
+-some optimizations and fixes for certain GIF's
+
+
+AniGIF V1.0.1.xxx
+-----------------
+-Several size and speed optimzations when creating individual frames
+-Fixed a bug where GPFed for certain GIF's.
+-New message supported WAGM_ZOOM: wParam:N/A,	lParam:TRUE(Zoom In by 10%)/FALSE(Zoom Out by 10%)
+	Press F3 to ZoomIn / F4 to ZoomOut
+-New window Style :WAGS_CENTER
+
+AniGIF V1.0.0.xxx
+-----------------
+First release
+
+
+Antonis Kyprianou
+http://www.winasm.net
