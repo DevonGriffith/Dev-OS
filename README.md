@@ -5,6 +5,8 @@ An Operating System (OS) built from scratch with assembly and C. Tutorials and i
 brew install qemu nasm (Do NOT Use XCode's nasm, use usr/local/bin/nasm)
 If you run into errors try calling: qemu-system-x86_64 binfile
 
+This project was started using research from Nick Blundell.
+
 Follow along at your own pace, and don't be scared to try experimenting as you get more familiar with the code. It's easy to copy and paste, it's a lot harder to understand what you've built when you don't know what it is you're doing each step of the way.
 
 This OS is being maintained and updated on Windows and Linux environments. 
